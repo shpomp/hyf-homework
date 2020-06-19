@@ -1,0 +1,286 @@
+/* $backblue: #4276c9; */
+:root {
+  --backblue: #4276c9; /* var(--backblue) */
+  --shadowblue: #3a5c91; /* var(--shadowblue) */
+  --text: #4f4f4f; /* var(--text) */
+  
+  --grey: #6D6E7E; /* var(--grey) */
+  --purple: #8584CA; /* var(--purple) */
+  --yellow: #f2e99d; /* var(--yellow) is not shown well?*/
+  --pink: #BC7ABF; /* var(--pink) */
+  --blue: #558ED4; /* var(--blue) */
+
+  --lgrey: #8486AB; /* var(--lgrey) ?? */
+  --lpurple: #A09DDB; /* var(--lpurple) */
+  --lyellow: #F1E9BD; /* var(--lyellow) */
+  --lpink: #D292D3; /* var(--lpink) */
+  --lblue: #7DA8E0; /* var(--lblue) */
+}
+
+/* -------- BODY , GENERAL TAGS --------  */
+
+body {
+  background-color: var(--backblue);
+  color: var(--text);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8em;
+}
+
+#sheetmain {
+  background-color: #f5f5f5;
+  margin: 50px;
+  border-radius: 5px;
+  box-shadow: 10px 10px var(--shadowblue);
+}
+
+h3 {
+  color: var(--shadowblue);
+}
+
+p a {
+  text-decoration: none;
+  color: var(--blue)
+}
+
+a {
+  text-decoration: none;
+  color: var(--text);
+}
+
+main section{
+  margin-left: 30px;
+  padding: 20px;
+  /* opacity: 0.5; */
+  margin-bottom: 20px;
+}
+
+article {
+  margin-left: 40px;
+  padding: 10px;
+}
+
+#strategies a:hover, #resources a:hover {
+  color: var(--blue);
+}
+
+/* main section:hover {opacity:1;} */
+
+ul {
+  padding-left: 0px;
+  list-style: none;
+}
+
+/* triangles */
+.purpletriangle {color: var(--purple);}
+.yellowtriangle {color: var(--yellow);}
+.pinktriangle {color: var(--pink);}
+.bluetriangle {color: var(--blue);}
+
+span[id$="triangle"]{
+  font-size: 40px;
+  vertical-align: sub;
+}
+
+
+/* -------- HEADER --------  */
+
+#sheethead {
+  background-color: #e6e6e6;
+  margin: 50px;
+  border-radius: 5px;
+  box-shadow: 10px 10px var(--shadowblue);
+  height: 250px;
+  color: #858585;
+}
+
+img {
+  width: 140px;
+  border-radius: 50%;
+  padding: 20px;
+  /* float: left; */
+  /* position: relative; */
+  margin: auto;
+  display: block;
+  }
+
+header h1 {
+  text-align: center;
+  margin-top: -15px;
+  margin-bottom: 20px;
+  letter-spacing: 0.5em;
+}
+
+
+/* -------- NAVIGATION --------  */
+
+.navigation-banner { /* goes slightly over in header - why?*/
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /*flex-wrap: wrap;  *.
+  margin-bottom: 0px;
+  /*align-content: flex-start;*/
+  flex-flow: nowrap row; 
+  align-items: center;
+}
+
+li[class^="nav-"], li[class^="foot-"]{
+  width: 25%;
+  text-align: center;
+  padding: 0.5em;
+  font-size: 1.2em;
+}
+
+header .nav-exp {border-bottom-left-radius: 5px;}
+header .nav-res {border-bottom-right-radius: 5px;}
+#foot-nav-exp {border-top-left-radius: 5px;}
+#foot-nav-res {border-top-right-radius: 5px;}
+
+
+li[class*="nav-exp"] {background-color: var(--purple);}
+li[class*="nav-exp"]:hover {background-color: var(--lpurple);
+transition-duration: 1s;}
+
+li[class*="nav-edu"] {background-color: var(--yellow);}
+li[class*="nav-edu"]:hover {background-color: var(--lyellow);
+transition-duration: 1s;}
+
+li[class*="nav-lestr"] {background-color: var(--pink);}
+li[class*="nav-lestr"]:hover {background-color: var(--lpink);
+transition-duration: 1s;}
+
+li[class*="nav-res"] {background-color: var(--blue);}
+li[class*="nav-res"]:hover {background-color: var(--lblue);
+transition-duration: 1s;}
+
+
+/* -------- ASIDE --------  */
+
+aside {
+  float: right;
+  padding: 30px;
+  border-left: 1px solid #d1d1d1;
+  width: 30%;
+}
+aside h4 {
+  color: var(--shadowblue);
+  text-align: right;
+}
+
+aside section {
+  margin-top: 90px;
+  }
+  
+  aside article, aside h3 {
+    text-align: right;
+    color: var(--text);
+  }
+  
+/* skill bars */
+
+  .bar {
+    width: 100%;
+    background-color: #d1d1d1;
+    border-radius: 5px;
+  }
+  
+  .label {
+    text-align: right;
+    padding: 3px;
+    border-radius: 5px;
+    font-size: 0.85em;
+  }
+  
+  .html {width: 65%; background-color: var(--lblue);}
+  .css {width: 35%; background-color: var(--lblue);}
+  .js {width: 10%; background-color: var(--lblue);}
+  .sql {width: 40%; background-color: var(--lblue);}
+  .cpp {width: 50%; background-color: var(--lblue);}
+
+  
+  .eng {width: 97%; background-color: var(--lblue);}
+  .dk {width: 80%; background-color: var(--lblue);}
+  .lt {width: 99%; background-color: var(--lblue);} /* goes slightly over because of padding :/ */
+  .ru {width: 13%; background-color: var(--lblue);}
+  
+
+/* -------- FOOTER --------  */
+
+#sheetfooter {
+  background-color: #f5f5f5;
+  margin: 50px;
+  border-radius: 5px;
+  box-shadow: 10px 10px var(--shadowblue);
+  text-align: center;
+}
+
+footer a {
+  padding: 20px;
+}
+
+footer section a:hover{
+  transition-duration: 1s;
+  color: var(--lgrey);
+}
+
+
+/* -------- MEDIA --------  */
+
+@media screen and (max-width: 700px) {
+  /*div[id*="sheet"]{   whyyyyy? 
+    margin: 30px;
+  } */
+
+  main section{
+    margin-left: 5px;
+    padding: 5px;
+    margin-bottom: 20px;
+  }
+
+  /* top nav bar goes weird */
+
+  h4, h3, h2, h1 {
+    font-size: 1.1em;  }  /* why it still gets smaller when em is 1? */
+  
+    a {
+      font-size: 0.8em;   } /* makes the above smaller but <a> bigger?? */
+
+  article {
+    margin-left: 5px;
+    padding: 10px;
+  }
+
+  span[id$="triangle"]{
+    font-size: 20px;
+    vertical-align: sub;
+  }
+  img {
+    width: 100px;
+    }
+  
+aside {
+      padding: 10px;
+    }
+
+aside section {
+    margin-top: 30px;
+    }
+    
+    .label {
+      text-align: right;
+      padding: 2px;
+      border-radius: 5px;
+      font-size: 0.75em;
+    }
+
+.russian {display: none;}
+
+footer a {
+  padding: 10px;
+}
+
+#footer-links {
+  font-size: 10px
+}
+
+}
