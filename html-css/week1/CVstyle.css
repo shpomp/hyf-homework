@@ -81,8 +81,13 @@ span[id$="triangle"]{
   vertical-align: sub;
 }
 
+main {
+  display: grid;
+  grid-template-columns: 66% 34%;
+}
 
-/* -------- HEADER --------  */
+
+/* --------------- HEADER ---------------  */
 
 #sheethead {
   background-color: #e6e6e6;
@@ -106,8 +111,23 @@ img {
 header h1 {
   text-align: center;
   margin-top: -15px;
-  margin-bottom: 20px;
+  margin-bottom: 7px;
   letter-spacing: 0.5em;
+}
+
+#grid {
+  display: grid;
+  grid-template-columns: 70% 30%;
+}
+
+#flex-contacts {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+#flex-contacts span  {
+  float: right;  /* how if not float? */
 }
 
 
@@ -157,18 +177,17 @@ transition-duration: 1s;}
 /* -------- ASIDE --------  */
 
 aside {
-  float: right;
-  padding: 30px;
   border-left: 1px solid #d1d1d1;
-  width: 30%;
+  margin-right: 20px;
 }
+
 aside h4 {
   color: var(--shadowblue);
   text-align: right;
 }
 
 aside section {
-  margin-top: 90px;
+  margin-top: 40px;
   }
   
   aside article, aside h3 {
@@ -201,7 +220,7 @@ aside section {
   .eng {width: 97%; background-color: var(--lblue);}
   .dk {width: 80%; background-color: var(--lblue);}
   .lt {width: 99%; background-color: var(--lblue);} /* goes slightly over because of padding :/ */
-  .ru {width: 13%; background-color: var(--lblue);}
+  .ru {width: 13%; background-color: var(--lblue);} /* need to fix it! expands when shrinking */
   
 
 /* -------- FOOTER --------  */
@@ -218,13 +237,17 @@ footer a {
   padding: 20px;
 }
 
-footer section a:hover{
+#footer-links a {
+  color: #858585;
+}
+
+#footer-links a:hover{
   transition-duration: 1s;
-  color: var(--lgrey);
+  color: var(--blue);
 }
 
 
-/* -------- MEDIA --------  */
+/* ------------------------ MEDIA ----------------------- to be disregarded!  */
 
 @media screen and (max-width: 700px) {
   /*div[id*="sheet"]{   whyyyyy? 
@@ -280,7 +303,7 @@ footer a {
 }
 
 #footer-links {
-  font-size: 10px
+  font-size: 10px;
 }
 
 }
