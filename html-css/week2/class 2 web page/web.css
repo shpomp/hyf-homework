@@ -1,0 +1,261 @@
+* {
+  box-sizing: border-box;
+  /* font-family: 'Roboto', sans-serif;  messed up the bold */
+  font-family: sans-serif;
+}
+
+body { padding: 0; margin: 0;}
+
+main, footer, header nav, #off-white-header * { 
+  margin-right: 12vw;
+  margin-left: 15vw;
+}
+
+ul {
+padding-left: 0px;
+list-style-type: none;}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+main h2 p {
+  word-break: break-all;
+}
+
+h2, h3, h4 {
+  font-weight: 600; /* it seems to not be working! */
+  letter-spacing: 0.05em;
+}
+
+
+
+/*---------------------------- HEADER ----------------------------*/
+
+#off-white-header {
+  background-color: #f5f5f5;
+  padding: 6vh 0px 6vh 0px;
+  box-shadow: 0px 1px #e8e8e8;
+}
+
+header p {
+  color: gray;
+  margin-top: -15px;
+  font-size: 2vh;
+  letter-spacing: 0.1em;  
+}
+
+img {
+  width: 100vw;
+}
+
+/*---------nav--------*/
+
+#navigation-columns {
+  display:grid;
+  grid-template-columns: repeat(12,auto);
+  padding: 2vh 0px 2vh 0px;
+}
+
+header a:hover {
+  color: gray;
+  transition-duration: 0.3s;
+}
+
+
+/*---------------------------- MAIN ----------------------------*/
+
+main {
+  display:grid;
+  column-gap: 5vw;
+  row-gap: 3vh;
+  padding-top: 4vh;;
+}
+
+#grid-first {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+#grid-second {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+#grid-third {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+#grid-fourth {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+
+#icons-grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  row-gap: 10vh;
+  margin-bottom: 10vh;
+}
+
+#icons-grid img {
+  width: 50%;
+}
+
+#icons-grid img:hover {
+  transition-duration: 0.2s;
+  transform: scale(1.3);
+}
+
+main article:last-child h2 {
+  padding-bottom: 3vh;
+}
+
+main p {
+  color: gray;
+}
+
+/* main article::nth-child(2) h2 {
+  padding-top: 5vh;
+  padding-bottom: 3vh; 
+} */
+
+/* main article h2:not(:first-child){
+  color: red;
+} */
+
+
+/*---------------------------- FOOTER ----------------------------*/
+
+
+#violet {
+  background-color: #6736cd;
+}
+
+footer {
+  color: white;
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 8%;
+}
+
+footer section {
+  margin-top: 20%;
+  margin-bottom: 50%;
+}
+
+footer h4 {
+  letter-spacing: 0.1em;
+}
+
+iframe {
+  width: 17vw;
+  height: 23vh;
+}
+
+footer section:first-child p {
+  line-height: 0.6em;
+  font-weight: 200;
+}
+
+footer li {
+  border-top: 2px solid #6E40D2;
+  line-height: 3em;
+}
+
+footer li:first-child {
+  border-top: 2px solid #6736cd;
+}
+
+footer li:hover {
+  padding-left: 1vw;
+  transition-duration: 0.5s;
+}
+
+/* ++++++++++++++++++++++++++++++++++ media ++++++++++++++++++++++++++++++++++ */
+
+/*------phone or alike-------*/
+
+
+ @media screen and (max-width: 700px) {
+
+main, footer, header nav, #off-white-header * { 
+  margin-right: 10vw;
+  margin-left: 10vw;
+}
+
+h1, h2, h3, h4 {
+  font-size: 1.4em;
+}
+
+
+header p {
+  color: gray;
+  margin-top: -15px;
+  font-size: 1.6vh;
+  letter-spacing: 0.1em;  
+}
+
+#navigation-columns {
+  display: block;
+  padding: 1.5vh 0px 1.5vh 0px;
+}
+
+header nav ul li {
+  padding: 1.7vh;
+}
+
+
+main p {
+  text-align: justify;
+}
+
+main {
+  display: block;
+}
+
+main article:not(:first-child) {
+  padding-top: 2vh;
+}
+
+#icons-grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  justify-items: center;
+  /* row-gap: 10vh; */
+}
+
+#icons-grid img {
+  width: 9vw;
+}
+
+
+footer {
+  display:flex;
+  flex-direction: column;
+  font-size: 0.9em;
+}
+
+footer section {
+  margin-top: 7%;
+  margin-bottom: 5%;
+}
+
+footer section:first-child {
+margin: auto;}
+
+iframe {
+  width: 60vw;
+  height: 45vh;
+}
+
+
+footer li {
+  margin-left: 5%;
+}
+
+
+} 
