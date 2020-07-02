@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="order.css" />
+    <title>PAYMENT FORM</title>
+  </head>
+
+  <body>
+    <header>
+      <div id="gradient-order-summary">
+        <h2>Order Summary</h2>
+        <div class="float-right-header">
+          <p>Soudfa Plus: 3 months</p>
+          <p>$33.33 / month</p>
+        </div>
+        <hr />
+        <div class="float-right-header">
+          <h3>Total</h3>
+          <h3>$100</h3>
+        </div>
+      </div>
+    </header>
+
+    <form>
+      <div>
+        <h2 id="payment-method-header">Payment Method</h2>
+        <div id="payment-method">
+          <div class="payment-method-button">
+            <input type="radio" id="credit-debit" name="payment" value="card" />
+            <label for="credit-debit">
+              <img src="cards.png" id="cards" />
+              <p>Credit / Debit</p>
+            </label>
+          </div>
+
+          <div class="payment-method-button">
+            <input type="radio" id="paypal" name="payment" value="paypal" />
+            <label for="paypal">
+              <img src="paypal.png" id="paypal" />
+              <p>Paypal</p>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div id="card-info">
+        <h2 id="card-info-header">Card Info</h2>
+        <div id="card-info-input">
+          <div>
+            <label for="card-number">Card number</label><br />
+            <input
+              type="text"
+              id="card-number"
+              placeholder="1234 1234 1234 1234"
+              name="card-number"
+              required
+            />
+          </div>
+
+          <div>
+            <label for="exp-date">Expiry date</label><br />
+            <input
+              type="text"
+              id="exp-date"
+              placeholder="MM / YY"
+              name="exp-date"
+              required
+            />
+          </div>
+
+          <div>
+            <label for="sec-code">Security code</label><br />
+            <input
+              type="text"
+              id="sec-code"
+              placeholder="CVV"
+              name="sec-code"
+              required
+            />
+          </div>
+        </div>
+      </div>
+
+      <input type="submit" id="buy-now" value="Buy now" />
+      <p id="need-help">Need Help?</p>
+    </form>
+  </body>
+</html>

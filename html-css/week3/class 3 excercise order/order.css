@@ -1,0 +1,226 @@
+:root {
+  --gradient: linear-gradient(
+    to bottom right,
+    rgb(255, 157, 77) 11%,
+    rgba(255, 0, 157, 1) 100%
+  );
+} /* var(--gradient) */
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+}
+
+/* -------- gradient top info -------- */
+
+#gradient-order-summary {
+  background: var(--gradient);
+  padding: 1vh 0px 1vh 0px;
+  color: #f5f5f5;
+}
+
+#gradient-order-summary h2 {
+  margin-left: 2%;
+}
+
+.float-right-header {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+hr {
+  margin-left: 2%;
+  margin-right: 2%;
+  border: 1px solid;
+}
+
+/* -------- form -------- */
+
+form {
+  width: 100vw;
+  height: 100vh;
+  background-color: #f5f5f5;
+  padding: 1vh 0px 1vh 0px;
+}
+
+form h2 {
+  text-align: center;
+  color: rgb(70, 70, 70);
+}
+
+/* payment method */
+
+input[type="radio"] {
+  display: none;
+}
+
+#payment-method {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 10px;
+  margin-left: 3vw;
+  margin-right: 3vw;
+}
+
+#payment-method label {
+  width: 45vw;
+  height: 15vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 7px 7px 28px -2px rgba(140, 140, 140, 0.7);
+  color: rgb(104, 103, 103);
+}
+
+#payment-method label * {
+  margin: 2px;
+}
+
+input[type="radio"]:checked + label {
+  border: solid 2px rgba(255, 0, 157, 0.445);
+  border-radius: 10px;
+  filter: grayscale(0);
+  transition-duration: 0.5s;
+  transition-property: filter;
+}
+
+input[type="radio"]:not(:checked) ~ label {
+  filter: grayscale(100);
+}
+
+#paypal {
+  width: 4vw;
+}
+
+#cards {
+  width: 9vw;
+}
+
+/* card info */
+
+#card-info {
+  margin-top: 5vh;
+  margin-bottom: 3vh;
+}
+
+#card-info-input {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr 1.5fr;
+  justify-items: center;
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+
+#card-info-input div {
+  text-align: center;
+}
+
+#card-info-input input {
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(235, 235, 235);
+  padding: 10px;
+}
+
+#card-info-input label {
+  color: rgb(104, 103, 103);
+}
+
+#card-number {
+  width: 40vw;
+}
+
+#exp-date,
+#sec-code {
+  width: 20vw;
+}
+
+/* buy now button / need help text */
+
+#buy-now {
+  margin-top: 35px;
+  background: var(--gradient);
+  width: 40vw;
+  height: 45px;
+  margin-left: 30vw;
+  margin-right: 30vw;
+  border: none;
+  border-radius: 50px;
+  color: #f5f5f5;
+  font-size: large;
+}
+
+#need-help {
+  text-align: center;
+  color: rgb(196, 12, 125);
+  background: var(--gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ---------------------- MEDIA -------------------- */
+
+/* payment methods positions and background behaviour not right! */
+
+@media only screen and (max-width: 600px) {
+  #payment-method-header,
+  #card-info-header {
+    display: none;
+  }
+
+  #payment-method {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #payment-method label {
+    width: 50vw;
+
+    margin-top: -0.5rem;
+    box-shadow: none;
+  }
+
+  input[type="radio"]:checked + label {
+    filter: grayscale(0);
+    transition-duration: 0.5s;
+    transition-property: filter;
+    border: none;
+    border-radius: 0px;
+    /* background-color: #f5f5f5; */
+    background-color: lime;
+  }
+
+  input[type="radio"]:not(:checked) ~ label {
+    filter: grayscale(100);
+    /* background-color: #c9c9c9; */
+    background-color: maroon;
+  }
+
+  #card-info-input {
+    display: block;
+  }
+
+  #card-info-input div:not(:first-child) {
+    display: inline-block;
+    margin-top: 3vh;
+  }
+
+  #card-info {
+    margin-top: 30px;
+  }
+
+  #card-number {
+    width: 84vw;
+  }
+
+  #exp-date,
+  #sec-code {
+    width: 40vw;
+  }
+}
