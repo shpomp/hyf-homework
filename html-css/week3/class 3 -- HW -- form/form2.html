@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="form.css" />
+    <title>2-yourcustomtailor</title>
+    <title>FORM</title>
+  </head>
+
+  <body>
+    <header>
+      <section>
+        <span id="logo">logo</span>
+        <nav id="nav">navigation</nav>
+      </section>
+    </header>
+
+    <main>
+      <h1>Sign up to yourcustomtailor.com</h1>
+      <h2>Step 2/4: How can we reach you?</h2>
+      <section>
+        <label for="progress">Progress:</label><br />
+        <progress id="progress" max="100" value="50">
+          <span>25%</span>
+        </progress>
+
+        <p>
+          We will probably need to stay in touch somehow. Let us know how we can
+          reach you?
+        </p>
+      </section>
+
+      <form id="form-div">
+        <div>
+          <label for="email">Email: *</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="phone">Phone: *</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            pattern="[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}"
+          />
+        </div>
+
+          <div>
+            <label for="password">Password: *</label>
+            <input type="password" id="password" name="password" pattern="[a-zA-Z]{10,}" required />
+          </div>
+
+          <div>
+            <label for="re-password">Re-enter password: *</label>
+            <input type="password" id="re-password" name="re-password" pattern="[a-zA-Z]{10,}" required />
+          </div>
+
+          <p>I want to sign up for the newsletter:</p>
+        <div id="sign-up">
+          <div>
+            <label for="weekly">Weekly news</label>
+            <input type="radio" id="weekly" name="news" value="" />
+          </div>
+
+          <div>
+            <label for="monthly">Monthly news</label>
+            <input type="radio" id="monthly" name="news" value="" />
+          </div>
+
+          <div>
+            <label for="no-news">Don't send me news</label>
+            <input type="radio" id="no-news" name="news" value="" />
+          </div>
+        </div>
+      </form>
+      <input id="next-step" type="submit" value="Next step"><a href=""></a></input>
+
+    </main>
+  </body>
+</html>

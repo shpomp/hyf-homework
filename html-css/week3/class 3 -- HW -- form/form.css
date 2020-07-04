@@ -1,0 +1,239 @@
+body {
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+
+header section {
+  display: flex;
+  justify-content: space-between;
+}
+
+#logo,
+#nav {
+  border: 1px solid grey;
+  padding: 20px;
+  background-color: lightgray;
+  font-size: 1.5vh;
+}
+
+#nav {
+  width: 30vw;
+  text-align: center;
+}
+
+#intro-text {
+  width: 60vw;
+}
+
+progress {
+  border: 1px solid lightgray;
+  height: 4vh;
+  width: 100%;
+}
+
+progress::-webkit-progress-value {
+  background-color: rgb(127, 115, 160);
+}
+
+progress[value]::-webkit-progress-bar {
+  background-color: white;
+}
+
+/* --------------- general for form labels/inputs --------------- */
+
+#form-div {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+
+#form-div div input,
+select {
+  width: 20vw;
+  background-color: lightgray;
+  border: none;
+  margin: 5px;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+}
+
+#form-div label {
+  margin-top: 1.5vh;
+  width: 120px;
+  display: inline-block;
+  text-align: right;
+}
+
+#form-div div input:focus,
+textarea:focus,
+select:focus {
+  background-color: rgb(228, 228, 228);
+  border: 1px solid rgb(127, 115, 160);
+  border-radius: 0px;
+  outline: none;
+}
+
+#next-step:focus {
+  border: 1px solid rgb(127, 115, 160);
+  outline: none;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* --------------- FORM 1 --------------- */
+
+#prof-description-div label,
+#prof-description-div p {
+  width: 110px;
+  text-align: justify;
+  display: block;
+  margin-right: 1vw;
+}
+
+#prof-description-div {
+  display: flex;
+  margin-top: 4vh;
+  margin-bottom: 4vh;
+}
+
+textarea {
+  width: 100%;
+  resize: none;
+  background-color: lightgray;
+  border: none;
+}
+
+.shipping-hidden {
+  display: block;
+}
+#shipping:checked ~ #shipping-hidden {
+  /* only works with tilde */
+  position: absolute;
+  display: none;
+}
+
+/* --------------- FORM 2 --------------- */
+
+#sign-up {
+  display: flex;
+  flex-direction: row;
+}
+#sign-up label {
+  width: 150px;
+}
+
+#sign-up label ~ input {
+  display: inline-block;
+  width: 30px;
+}
+
+/* --------------- FORM 3 --------------- */
+
+#form3-div ul {
+  display: grid;
+  grid-template-columns: repeat(2, 20vw);
+}
+ul {
+  list-style-type: none;
+}
+
+#form3-div ul label {
+  display: inline-block;
+  width: 110px;
+  text-align: right;
+  margin-bottom: 2vh;
+}
+
+img {
+  width: 15vw;
+}
+
+#select-images {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+}
+#select-images div div label {
+  display: block;
+  width: 15vw;
+  margin-bottom: 3vh;
+  text-align: end;
+}
+
+/* --------------- FORM 4 --------------- */
+
+#exp-month,
+#exp-year {
+  width: 60px;
+}
+
+#form-div div:nth-child(5) input {
+  width: 55px;
+}
+
+/* ----------------- button ----------------- */
+
+#next-step {
+  float: right;
+  padding: 15px;
+  margin-top: 5vh;
+  margin-bottom: 3vh;
+  width: 20vw;
+  background-color: rgb(127, 115, 160);
+  border: none;
+  border-radius: 5px;
+}
+
+#next-step:hover {
+  background-color: rgb(95, 76, 146);
+}
+
+/* ------------------------- MEDIA ------------------------- */
+
+@media only screen and (max-width: 700px) {
+  /* --------------- FORM 1 --------------- */
+
+  #form-div div {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+
+  #prof-description-div {
+    display: block;
+  }
+
+  #prof-description-div label,
+  #prof-description-div p {
+    width: auto;
+    text-align: justify;
+    display: inline-block;
+  }
+
+  /* --------------- FORM 2 --------------- */
+
+  #sign-up {
+    flex-direction: column;
+  }
+
+  #sign-up label ~ input {
+    width: 20px;
+  }
+
+  /* --------------- FORM 3 --------------- */
+
+  #select-images {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-items: center;
+  }
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="form.css" />
+    <title>4-yourcustomtailor</title>
+    <title>FORM</title>
+  </head>
+
+  <body>
+    <header>
+      <section>
+        <span id="logo">logo</span>
+        <nav id="nav">navigation</nav>
+      </section>
+    </header>
+
+    <main>
+        <h1>Sign up to yourcustomtailor.com</h1>
+
+      <h2>Step 4/4: Payment</h2>
+      <section>
+        <label for="progress">Progress:</label><br />
+        <progress id="progress" max="100" value="75">
+          <span>25%</span>
+        </progress>
+
+        <p>
+Please fill in your payment data </p>
+      </section>
+
+      <form>
+
+        <div id="form-div">
+          <div>
+              <label for="name-on-card">Name on card: &#42;</label>
+              <input type="text" id="name-on-card" name="name-on-card" required>
+        
+          </div>
+  
+          <div>
+              <label for="card-type">Card type: &#42;</label>       
+              <select id="card-type" name="card-type">      <!-- countries from github-->
+                          <option value="blank"> - - - - - - -</option>
+                          <option value="VISA">VISA</option>
+                          <option value="Master card">Master card</option>
+                          <option value="AmExpress">American Express</option>
+                          <option value="Maestro">Maestro</option>
+                        
+              </select>
+          </div>
+        
+      
+          <div>
+              <label for="card-number">Credit card number: &#42;</label>
+              <input type="number" id="card-number" name="card-number" inputmode="numeric" pattern="[0-9]{16}" required>
+
+              <label for="first-name">First name: &#42;</label>
+              <input type="text" id="fname" name="fname" required>
+          </div>
+      
+
+              <div>
+                <label for="exp-month">Expiry month: &#42;</label>       
+                <select id="exp-month" name="exp-month">      <!-- countries from github-->
+                            <option value="blank"> - - </option>
+                            <option value="01">01</option>
+                            <option value="02">02</option>
+                            <option value="03">03</option>
+                            <option value="04">04</option>
+                </select>
+  
+                <label for="exp-year">Expiry year: &#42;</label>       
+                <select id="exp-year" name="exp-year">      <!-- countries from github-->
+                            <option value="blank"> - - </option>
+                            <option value="2020">2020</option>
+                            <option value="2021">2021</option>
+                            <option value="2022">2022</option>
+                            <option value="2023">2023</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="card-ccv">CCV &#42;</label>
+                <input type="number" id="card-ccv" name="card-ccv"  inputmode="numeric"  pattern="\d{3}" maxlength="3" required>
+              </div>
+
+            </div>
+      </form>
+      <input id="next-step" type="submit" value="Next step"><a href=""></a></input>
+
+    </main>
+  </body>
+</html>
