@@ -65,6 +65,17 @@ select {
   text-align: right;
 }
 
+input[type="radio"]:after {
+  border: 1px solid gray;
+  width: 20px;
+  height: 20px;
+  top: -4px;
+  right: -4px;
+  position: relative;
+  content: "";
+  display: inline-block;
+}
+
 #form-div div input:focus,
 textarea:focus,
 select:focus {
@@ -77,6 +88,13 @@ select:focus {
 #next-step:focus {
   border: 1px solid rgb(127, 115, 160);
   outline: none;
+}
+
+input,
+select {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -125,17 +143,17 @@ textarea {
 
 /* --------------- FORM 2 --------------- */
 
-#sign-up {
+#newsletter ul {
   display: flex;
   flex-direction: row;
 }
-#sign-up label {
-  width: 150px;
+
+#newsletter li input {
+  width: 30px;
 }
 
-#sign-up label ~ input {
-  display: inline-block;
-  width: 30px;
+#newsletter label {
+  width: 150px;
 }
 
 /* --------------- FORM 3 --------------- */
@@ -159,11 +177,11 @@ img {
   width: 15vw;
 }
 
-#select-images {
+#select-images ul {
   display: grid;
   grid-template-columns: repeat(4, auto);
 }
-#select-images div div label {
+#select-images ul li label {
   display: block;
   width: 15vw;
   margin-bottom: 3vh;
@@ -173,12 +191,13 @@ img {
 /* --------------- FORM 4 --------------- */
 
 #exp-month,
-#exp-year {
+#exp-year,
+#form-div div:nth-child(5) input {
   width: 60px;
 }
 
-#form-div div:nth-child(5) input {
-  width: 55px;
+input[name="card-ccv"] {
+  background-color: burlywood;
 }
 
 /* ----------------- button ----------------- */
@@ -201,6 +220,18 @@ img {
 /* ------------------------- MEDIA ------------------------- */
 
 @media only screen and (max-width: 700px) {
+  #form-div {
+    margin-left: 1vw;
+    margin-right: 1vw;
+  }
+
+  #form-div div input,
+  select {
+    width: 200px;
+    background-color: lightgray;
+    margin: 10px;
+  }
+
   /* --------------- FORM 1 --------------- */
 
   #form-div div {
@@ -221,17 +252,13 @@ img {
 
   /* --------------- FORM 2 --------------- */
 
-  #sign-up {
+  #newsletter ul {
     flex-direction: column;
-  }
-
-  #sign-up label ~ input {
-    width: 20px;
   }
 
   /* --------------- FORM 3 --------------- */
 
-  #select-images {
+  #select-images ul {
     display: grid;
     grid-template-columns: repeat(2, auto);
     justify-items: center;
