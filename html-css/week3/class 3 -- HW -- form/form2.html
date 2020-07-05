@@ -45,36 +45,52 @@
           />
         </div>
 
-          <div>
-            <label for="password">Password: *</label>
-            <input type="password" id="password" name="password" pattern="[a-zA-Z]{10,}" required />
-          </div>
+        <div>
+          <label for="password">Password: *</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            pattern="[a-zA-Z]{10,}"
+            required
+          />
+        </div>
 
-          <div>
-            <label for="re-password">Re-enter password: *</label>
-            <input type="password" id="re-password" name="re-password" pattern="[a-zA-Z]{10,}" required />
-          </div>
+        <div>
+          <label for="re-password">Re-enter password: *</label>
+          <input
+            type="password"
+            id="re-password"
+            name="re-password"
+            pattern="[a-zA-Z]{10,}"
+            required
+          />
+        </div>
 
-          <p>I want to sign up for the newsletter:</p>
-        <div id="sign-up">
-          <div>
-            <label for="weekly">Weekly news</label>
-            <input type="radio" id="weekly" name="news" value="" />
-          </div>
+        <div id="newsletter">
+          <h4>I want to sign up for the newsletter:</h4>
 
-          <div>
-            <label for="monthly">Monthly news</label>
-            <input type="radio" id="monthly" name="news" value="" />
-          </div>
+          <ul>
+            <li>
+              <label for="weekly">Weekly news</label>
+              <input type="radio" id="weekly" name="news" value="" />
+            </li>
 
-          <div>
-            <label for="no-news">Don't send me news</label>
-            <input type="radio" id="no-news" name="news" value="" />
-          </div>
+            <li>
+              <label for="monthly">Monthly news</label>
+              <input type="radio" id="monthly" name="news" value="" />
+            </li>
+
+            <li>
+              <label for="no-news">Don't send me news</label>
+              <input type="radio" id="no-news" name="news" value="" />
+            </li>
+          </ul>
         </div>
       </form>
-      <input id="next-step" type="submit" value="Next step"><a href=""></a></input>
-
+      <a href="form3.html"
+        ><input id="next-step" type="submit" value="Next step"
+      /></a>
     </main>
   </body>
 </html>
