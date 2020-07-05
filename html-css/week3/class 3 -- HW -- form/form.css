@@ -232,6 +232,11 @@ input[name="card-ccv"] {
     margin: 10px;
   }
 
+  #form-div label {
+    font-size: 0.88em;
+    width: 90px;
+  }
+
   /* --------------- FORM 1 --------------- */
 
   #form-div div {
