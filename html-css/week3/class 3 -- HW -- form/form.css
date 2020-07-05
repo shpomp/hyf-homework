@@ -227,7 +227,7 @@ input[name="card-ccv"] {
 
   #form-div div input,
   select {
-    width: 130px;
+    width: 100px;
     background-color: lightgray;
     margin: 10px;
   }
