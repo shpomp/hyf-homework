@@ -65,17 +65,6 @@ select {
   text-align: right;
 }
 
-input[type="radio"]:after {
-  border: 1px solid gray;
-  width: 20px;
-  height: 20px;
-  top: -4px;
-  right: -4px;
-  position: relative;
-  content: "";
-  display: inline-block;
-}
-
 #form-div div input:focus,
 textarea:focus,
 select:focus {
@@ -156,17 +145,36 @@ textarea {
   width: 150px;
 }
 
+/* input[type="radio"]:after {
+  border: 1px solid gray;
+  width: 20px;
+  height: 20px;
+  top: -4px;
+  right: -4px;
+  position: relative;
+  content: "";
+  display: inline-block;
+} */
+
 /* --------------- FORM 3 --------------- */
 
-#form3-div ul {
+#interests ul {
   display: grid;
   grid-template-columns: repeat(2, 20vw);
 }
+
+#interests ul label {
+  display: block;
+  width: 200px;
+  text-align: right;
+  margin-top: 10px;
+}
+
 ul {
   list-style-type: none;
 }
 
-#form3-div ul label {
+#select-images ul label {
   display: inline-block;
   width: 110px;
   text-align: right;
@@ -220,6 +228,19 @@ input[name="card-ccv"] {
 /* ------------------------- MEDIA ------------------------- */
 
 @media only screen and (max-width: 700px) {
+  header section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header section * {
+    margin: 1vh;
+  }
+
+  h1 {
+    font-size: 1.7em;
+  }
+
   #form-div {
     margin-left: 1vw;
     margin-right: 1vw;
@@ -227,14 +248,15 @@ input[name="card-ccv"] {
 
   #form-div div input,
   select {
-    width: 80px;
+    width: 45vw;
     background-color: lightgray;
     margin: 10px;
   }
 
   #form-div label {
-    font-size: 0.88em;
+    font-size: 0.85em;
     width: 90px;
+    background-color: cadetblue;
   }
 
   /* --------------- FORM 1 --------------- */
@@ -261,11 +283,23 @@ input[name="card-ccv"] {
     flex-direction: column;
   }
 
+  #newsletter ul li {
+    display: inline-flex;
+  }
+
+  #newsletter ul li label ~ input {
+    width: 40px;
+  }
+
   /* --------------- FORM 3 --------------- */
 
   #select-images ul {
     display: grid;
     grid-template-columns: repeat(2, auto);
     justify-items: center;
+  }
+
+  #interests ul {
+    display: list-item;
   }
 }
