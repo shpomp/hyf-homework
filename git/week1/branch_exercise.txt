@@ -1,0 +1,25 @@
+14. I see countries.txt with 2 countries in it
+
+15. 8ef52b6 (HEAD -> master) added countries file, added 2 countries in it
+
+16. I see countries.txt file with 4 countries in it 
+
+17. fae5ecc (HEAD -> add_countries) added countries file with 2 more countries in it
+8ef52b6 (master) added countries file, added 2 countries in it
+
+18. I see cities.txt file with 2 cities in it and countries.txt file with 2 countries in it
+
+19. bc86c89 (HEAD -> add_cities) added cities file, added 2 cities in it
+8ef52b6 (master) added countries file, added 2 countries in it
+
+22. I see countries.txt file with 4 countries in it
+
+23. fae5ecc (HEAD -> master, add_countries) added countries file with 2 more countries in it
+8ef52b6 added countries file, added 2 countries in it
+
+25. Cities.txt file with 2 cities, countries.txt file with 4 countries
+
+26. 05d0457 (HEAD -> master) cities.txt
+bc86c89 (add_cities) added cities file, added 2 cities in it
+fae5ecc (add_countries) added countries file with 2 more countries in it
+8ef52b6 added countries file, added 2 countries in it
