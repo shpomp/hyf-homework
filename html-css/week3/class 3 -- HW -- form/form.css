@@ -21,7 +21,7 @@ header section {
   text-align: center;
 }
 
-#intro-text {
+.intro-text {
   width: 60vw;
 }
 
@@ -41,14 +41,14 @@ progress[value]::-webkit-progress-bar {
 
 /* --------------- general for form labels/inputs --------------- */
 
-#form-div {
+.form-div {
   display: flex;
   flex-direction: column;
   margin-left: 5vw;
   margin-right: 5vw;
 }
 
-#form-div div input,
+.form-div div input,
 select {
   width: 20vw;
   background-color: lightgray;
@@ -58,14 +58,14 @@ select {
   padding-bottom: 1vh;
 }
 
-#form-div label {
+.form-div label {
   margin-top: 1.5vh;
   width: 120px;
   display: inline-block;
   text-align: right;
 }
 
-#form-div div input:focus,
+.form-div div input:focus,
 textarea:focus,
 select:focus {
   background-color: rgb(228, 228, 228);
@@ -100,15 +100,15 @@ input[type="number"] {
 
 /* --------------- FORM 1 --------------- */
 
-#prof-description-div label,
-#prof-description-div p {
+.prof-description-div label,
+.prof-description-div p {
   width: 110px;
   text-align: justify;
   display: block;
   margin-right: 1vw;
 }
 
-#prof-description-div {
+.prof-description-div {
   display: flex;
   margin-top: 4vh;
   margin-bottom: 4vh;
@@ -124,7 +124,7 @@ textarea {
 .shipping-hidden {
   display: block;
 }
-#shipping:checked ~ #shipping-hidden {
+#shipping:checked ~ .shipping-hidden {
   /* only works with tilde */
   position: absolute;
   display: none;
@@ -132,16 +132,16 @@ textarea {
 
 /* --------------- FORM 2 --------------- */
 
-#newsletter ul {
+.newsletter ul {
   display: flex;
   flex-direction: row;
 }
 
-#newsletter li input {
+.newsletter li input {
   width: 30px;
 }
 
-#newsletter label {
+.newsletter label {
   width: 150px;
 }
 
@@ -158,12 +158,12 @@ textarea {
 
 /* --------------- FORM 3 --------------- */
 
-#interests ul {
+.interests ul {
   display: grid;
   grid-template-columns: repeat(2, 20vw);
 }
 
-#interests ul label {
+.interests ul label {
   display: block;
   width: 200px;
   text-align: right;
@@ -174,7 +174,7 @@ ul {
   list-style-type: none;
 }
 
-#select-images ul label {
+.select-images ul label {
   display: inline-block;
   width: 110px;
   text-align: right;
@@ -185,11 +185,11 @@ img {
   width: 15vw;
 }
 
-#select-images ul {
+.select-images ul {
   display: grid;
   grid-template-columns: repeat(4, auto);
 }
-#select-images ul li label {
+.select-images ul li label {
   display: block;
   width: 15vw;
   margin-bottom: 3vh;
@@ -241,37 +241,36 @@ input[name="card-ccv"] {
     font-size: 1.7em;
   }
 
-  #form-div {
+  .form-div {
     margin-left: 1vw;
     margin-right: 1vw;
   }
 
-  #form-div div input,
+  .form-div div input,
   select {
     width: 45vw;
     background-color: lightgray;
     margin: 10px;
   }
 
-  #form-div label {
+  .form-div label {
     font-size: 0.85em;
     width: 90px;
-    background-color: cadetblue;
   }
 
   /* --------------- FORM 1 --------------- */
 
-  #form-div div {
+  .form-div div {
     display: grid;
     grid-template-columns: 1fr 2fr;
   }
 
-  #prof-description-div {
+  .prof-description-div {
     display: block;
   }
 
-  #prof-description-div label,
-  #prof-description-div p {
+  .prof-description-div label,
+  .prof-description-div p {
     width: auto;
     text-align: justify;
     display: inline-block;
@@ -279,27 +278,27 @@ input[name="card-ccv"] {
 
   /* --------------- FORM 2 --------------- */
 
-  #newsletter ul {
+  .newsletter ul {
     flex-direction: column;
   }
 
-  #newsletter ul li {
+  .newsletter ul li {
     display: inline-flex;
   }
 
-  #newsletter ul li label ~ input {
+  .newsletter ul li label ~ input {
     width: 40px;
   }
 
   /* --------------- FORM 3 --------------- */
 
-  #select-images ul {
+  .select-images ul {
     display: grid;
     grid-template-columns: repeat(2, auto);
     justify-items: center;
   }
 
-  #interests ul {
+  .interests ul {
     display: list-item;
   }
 }
