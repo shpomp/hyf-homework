@@ -16,7 +16,7 @@ let dogYearFuture = 2027;
 let shouldShowResultInDogYears = true; // boolean; change this for different calculation
 let dogAge = dogYearFuture - dogYearOfBirth; // dogYear renamed
 
-if (shouldShowResultInDogYears == true) {
+if (shouldShowResultInDogYears) {
   console.log(
     `Your dog will be ${dogAge * 7} dog years old in ${dogYearFuture}.`
   );
@@ -42,7 +42,9 @@ console.log(
 );
 if (housePrice >= houseCosts) {
   console.log("The house price is good, buy it!");
-} else console.log("The house is too expensive!");
+} else {
+  console.log("The house is too expensive!");
+}
 
 // Ez Namey (Startup name generator)
 
