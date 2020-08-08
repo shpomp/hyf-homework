@@ -21,8 +21,8 @@ const today = new Date();
 const todayNumber = today.getDay();
 
 function getEventWeekday(daysFromToday) {
-  let eventDays = todayNumber + daysFromToday;
-  let week = [
+  const eventDays = (todayNumber + daysFromToday) % 7;
+  const week = [
     "Sunday",
     "Monday",
     "Tuesday",
@@ -32,13 +32,10 @@ function getEventWeekday(daysFromToday) {
     "Saturday",
   ];
 
-  if (eventDays >= 7) {
-    eventDays = eventDays % 7;
-  }
   return week[eventDays];
 }
 
-const eventDate = getEventWeekday(19);
+const eventDate = getEventWeekday(13);
 console.log(eventDate);
 
 // WEATHER WEAR
@@ -78,51 +75,23 @@ function addStudentToClass(studentName) {
     if (class07Students.includes(studentName)) {
       alert(`Student ${studentName} is already in the class`); // return changed to alert after testing in CodePen
     } else if (studentName === "") {
-      alert("Please provide the student's name"); // return changed to alert after testing in CodePen
+      alert("Please provide the student's name");
     } else {
       class07Students.push(studentName);
     }
   } else {
     if (studentName === "queen") {
       if (class07Students.includes("queen")) {
-        alert("The Queen is already in the class"); // return changed to alert after testing in CodePen
+        alert("The Queen is already in the class");
       } else {
         class07Students.push(studentName);
       }
     } else {
-      alert("Cannot add more students to class 07"); // return changed to alert after testing in CodePen
+      alert("Cannot add more students to class 07");
     }
   }
 }
 
 function getNumberOfStudents() {
-  const totalStudents = class07Students.length;
-  return totalStudents;
+  return class07Students.length;
 }
-
-// CANDY HELPER  - NOT FINISHED. DON'T CHECK!!!!
-
-let boughtCandyPrices = [];
-
-function addCandy(candyType, weight) {
-  boughtCandyPrices.push(candyType, weight); // should be price?
-}
-
-addCandy("Sweet", 0.5);
-addCandy("Chocolate", 0.7);
-addCandy("Toffee", 1.1);
-addCandy("Chewing-gum", 0.03);
-
-console.log(boughtCandyPrices);
-
-let amountToSpend = Math.round(Math.random() * 100);
-console.log(amountToSpend);
-
-let boughtCandy = [];
-boughtCandy.push("Sweet", 70);
-boughtCandy.push("Chocolate", 50);
-boughtCandy.push("Toffee", 30);
-boughtCandy.push("Chewing-gum", 100);
-console.log(boughtCandy);
-
-function canBuyMoreCandy() {}
