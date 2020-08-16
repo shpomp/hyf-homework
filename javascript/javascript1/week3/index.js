@@ -12,19 +12,25 @@ const names = [
   "Samuel",
   "Katrine",
   "Tala",
+  "Ahmad",
 ];
 const nameToRemove = "Ahmad";
 
 console.log(names);
 
-for (let i = 0; i < names.length; i++) {
-  if (names[i] === nameToRemove) {
-    names.splice(i, 1);
-    //break; commented out as per feedback
-  }
+// for (let i = 0; i < names.length; i++) {
+//   if (names[i] === nameToRemove) {
+//     names.splice(i, 1);
+//     //break; commented out as per feedback
+//   }
+// }
+
+function notThisName(name) {
+  return name != nameToRemove;
 }
 
-console.log(names);
+console.log(names.filter(notThisName));
+
 console.log("\n");
 
 ///
