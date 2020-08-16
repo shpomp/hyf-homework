@@ -20,7 +20,7 @@ console.log(names);
 for (let i = 0; i < names.length; i++) {
   if (names[i] === nameToRemove) {
     names.splice(i, 1);
-    break;
+    //break; commented out as per feedback
   }
 }
 
@@ -35,17 +35,17 @@ console.log("\n");
 //The time should be formatted like this: 3 hours and 34 minutes.
 
 function countTravelTime(travelInformation) {
-  let travelTimeInteger =
+  const travelTimeInteger =
     travelInformation.destinationDistance / travelInformation.speed;
-  let hours = Math.floor(travelTimeInteger);
-  let minutes = Math.floor((travelTimeInteger - hours) * 60);
+  const hours = Math.floor(travelTimeInteger);
+  const minutes = Math.floor((travelTimeInteger - hours) * 60);
 
   return `The journey will take ${hours} hours and ${minutes} minutes.`;
 }
 
 const travelInformation = {
   speed: 70,
-  destinationDistance: 472,
+  destinationDistance: 482,
 };
 
 const travelTime = countTravelTime(travelInformation);
