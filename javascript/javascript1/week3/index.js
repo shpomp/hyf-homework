@@ -140,16 +140,12 @@ console.log(notes);
 // Now a user can save a note, but what if a user wants to see a specific note,
 // but only remembers the id?
 
-function getNote(id) {
-  for (let i = 0; i < notes.length; i++) {
-    if (notes[i].id === id) {
-      return notes[i];
-    }
-  }
+function whichID(note) {
+  return note.id === id;
 }
 
-const firstNote = getNote(1);
-console.log(firstNote);
+let id = 2;
+console.log(notes.filter(whichID));
 
 // Log out notes
 // What if the user just wants to read all his notes?
