@@ -35,6 +35,9 @@ const spiritAdjectivesArr = [
   "Private",
   "Shy",
   "Political",
+  "Trustworthy",
+  "Reliable",
+  "Ferocious",
 ];
 
 const spiritAnimalsArr = [
