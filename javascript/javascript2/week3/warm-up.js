@@ -158,3 +158,30 @@ whichJoke(randomBoolean, funnyJoke, badJoke);
 // 1. Create an array with 3 items. All items should be functions. Iterate through the array and call all the functions.
 // 2. Create a function as a const and try creating a function normally. Call both functions. Read up on this if you are interested: https://stackoverflow.com/questions/1013385/what-is-the-difference-between-a-function-expression-vs-declaration-in-javascrip
 // 3. Create an object that has a key whose value is a function. Try calling this function.
+
+// 1., 2.
+const mew = () =>
+    console.log("mew!")
+
+
+const woof = () =>
+    console.log("woof!")
+
+
+function hello () {
+    console.log("hello!");}
+
+    const functions = [mew, woof, hello];
+
+
+    functions.forEach((fnction) => fnction());
+
+// 3.
+
+const IamObject = {
+  key: () => console.log("I am an object key!")
+}
+
+IamObject.key();
+
+
