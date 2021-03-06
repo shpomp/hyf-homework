@@ -160,6 +160,7 @@ whichJoke(randomBoolean, funnyJoke, badJoke);
 // 3. Create an object that has a key whose value is a function. Try calling this function.
 
 // 1., 2.
+
 const mew = () =>
     console.log("mew!")
 
