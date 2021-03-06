@@ -60,43 +60,9 @@ planetLogging(saturn);
 
 // 5. Create a button with the text called "Log location".
 // When this button is clicked the location (latitude, longitude) of the user should be logged out using this browser api
-
-// let locationButton = document.createElement("button");
-// locationButton.innerText = "Log location";
-// document.body.appendChild(locationButton);
-// locationButton.addEventListener("click", getLocation);
-// locationButton.addEventListener("click", mapLocation);
-
-// let locationStatus = document.createElement("p");
-// document.body.appendChild(locationStatus);
-// const latitude = position.coords.latitude;
-// const longitude = position.coords.longitude;
-
-// function getLocation() {
-//   function success(position) {
-//     locationStatus.innerHTML = `Latitude: ${latitude} °, Longitude: ${longitude} °`;
-//   }
-
-//   function error() {
-//     status.textContent = "Unable to retrieve your location";
-//   }
-
-//   if (navigator.geolocation) {
-//     navigator.geolocation.getCurrentPosition(success, error);
-//   } else {
-//     locationStatus.innerHTML = "Geolocation is not supported by your browser";
-//   }
-// }
-
 // // 6. Optional Now show that location on a map using fx the Google maps api
 
-// let map;
-// function mapLocation() {
-//   map = new google.maps.Map(document.getElementById("map"), {
-//     center: { latitude, longitude },
-//     zoom: 8,
-//   });
-// }
+// in geo folder
 
 // 7. Create a function called runAfterDelay.
 // It has two parameters: delay and callback.
@@ -122,7 +88,6 @@ runAfterDelay(delay3, function () {
 // 8. Check if we have double clicked on the page.
 // A double click is defined by two clicks within 0.5 seconds.
 // If a double click has been detected, log out the text: "double click!"
-// !!!!!
 
 function doubleclicked() {
   let dblclck = document.createElement("p");
