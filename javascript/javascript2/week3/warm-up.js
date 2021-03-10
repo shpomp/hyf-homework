@@ -33,7 +33,7 @@ delayedString(delay, stringToLog);
 const newDelay = 5;
 const newStringToLog = "Logged after 5 seconds";
 
-let buttonClick = document.createElement("button");
+const buttonClick = document.createElement("button");
 buttonClick.innerText = "clickity click";
 document.body.appendChild(buttonClick);
 
