@@ -15,7 +15,7 @@ let after2point5seconds = setTimeout(
 // Calling this function should lo g out the stringToLog after delay seconds.
 // Call the function you have created with some different arguments.
 
-let stringToLog = "what a beautiful day!";
+const stringToLog = "what a beautiful day!";
 let delay = 3;
 
 function delayedString(delay, stringToLog) {
@@ -149,4 +149,3 @@ const IamObject = {
 }
 
 IamObject.key();
-
