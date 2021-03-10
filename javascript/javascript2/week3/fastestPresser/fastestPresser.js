@@ -1,4 +1,3 @@
-//import "confetti-js";
 
 console.log("script");
 
