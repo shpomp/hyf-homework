@@ -1,5 +1,4 @@
 
-console.log("script");
 
 const button = document.getElementById("game-start");
 const countS = document.getElementById("how-many-S");
