@@ -73,7 +73,7 @@ function runAfterDelay(delay1, callback) {
   setTimeout(callback, delay1 * 1000);
 }
 
-let delay2 = 7;
+const delay2 = 7;
 runAfterDelay(delay2, function () {
   console.log(`Logged after 7 seconds`);
 });
