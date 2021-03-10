@@ -78,7 +78,7 @@ runAfterDelay(delay2, function () {
   console.log(`Logged after 7 seconds`);
 });
 
-let delay3 = 9;
+const delay3 = 9;
 runAfterDelay(delay3, function () {
   appearingButton = document.createElement("button");
   appearingButton.innerText = `I appeared after ${delay3} seconds!`;
