@@ -90,7 +90,7 @@ runAfterDelay(delay3, function () {
 // If a double click has been detected, log out the text: "double click!"
 
 function doubleclicked() {
-  let dblclck = document.createElement("p");
+  const dblclck = document.createElement("p");
   dblclck.innerText = "Double click!";
   document.body.appendChild(dblclck);
   console.log("double click!");
@@ -149,5 +149,4 @@ const IamObject = {
 }
 
 IamObject.key();
-
 
