@@ -6,7 +6,6 @@ const countL = document.getElementById("how-many-L");
 
 let confettiSettings = { target: "my-canvas" };
 let confetti = new ConfettiGenerator(confettiSettings);
-//confetti.clear();
 
 let gameDuration = () => {
   let duration = document.getElementById("game-duration-input").value;
