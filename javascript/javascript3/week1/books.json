@@ -1,0 +1,51 @@
+[
+
+    {
+        "author": "Albert Camus",
+        "title": "The Stranger",
+        "language": "French",
+        "year": 1942
+      },
+      {
+        "author": "Fyodor Dostoevsky",
+        "title": "Crime and Punishment",
+        "language": "Russian",
+        "year": 1866
+      },
+      {
+        "author": "Fyodor Dostoevsky",
+        "title": "The Idiot",
+        "language": "Russian",
+        "year": 1869
+      },
+      {
+        "author": "Gabriel Garcia Marquez",
+        "title": "One Hundred Years of Solitude",
+        "language": "Spanish",
+        "year": 1967
+      },
+      {
+        "author": "Gunter Grass",
+        "title": "The Tin Drum",
+        "language": "German",
+        "year": 1959
+      },
+      {
+        "author": "Ernest Hemingway",
+        "title": "The Old Man and the Sea",
+        "language": "English",
+        "year": 1952
+      },
+      {
+        "author": "Edgar Allan Poe",
+        "title": "Tales",
+        "language": "English",
+        "year": 1950
+      },
+      {
+        "author": "Jose Saramago",
+        "language": "Portuguese",
+        "title": "Blindness",
+        "year": 1995
+      }
+]
