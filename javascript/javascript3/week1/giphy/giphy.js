@@ -8,7 +8,6 @@
 const triggerSearchButton = document.getElementById("trigger-search-button");
 const searchResultsDiv = document.getElementById("search-results-div");
 const message = document.createElement("h2");
-let fetchURL = "";
 
 
 const fetchGifFunction = (fetchUrl) => {
