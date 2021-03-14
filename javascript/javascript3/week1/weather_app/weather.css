@@ -1,0 +1,79 @@
+* {
+  font-family: "Architects Daughter", cursive;
+  color: rgb(14, 68, 117);
+}
+
+body {
+  background-image: url("https://images-na.ssl-images-amazon.com/images/I/61Y9I2v2ZDL._AC_SL1500_.jpg");
+  text-align: center;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  border-radius: 25px;
+  row-gap: 15px;
+}
+
+h2,
+span {
+  color: rgb(190, 121, 30);
+}
+
+#message {
+  position: absolute;
+  z-index: 100;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  margin-top: -35px;
+}
+
+#weather-div {
+  background-color: rgb(218, 202, 112);
+  position: relative;
+  padding: 10px;
+  height: 500px;
+  width: 400px;
+  align-items: center;
+}
+
+input,
+button {
+  margin: 5px;
+  height: 45px;
+}
+
+input {
+  width: 200px;
+  text-align: center;
+}
+
+#temperature,
+#feelsLike,
+#sunrise,
+#sunset {
+  display: inline;
+  margin: 10px;
+}
+
+#gmap-div {
+  justify-items: center;
+}
+.gmap_canvas {
+  overflow: hidden;
+  background: none !important;
+  height: 300px;
+  width: 500px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+.mapouter {
+  text-align: right;
+  height: 300px;
+  width: 300px;
+}
