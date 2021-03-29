@@ -131,14 +131,6 @@ WHERE status.name = "done"
 group by user.name;
 
 
--- hw
-
-SELECT status.name, count(task.id) as amount
-FROM hyf.task
-    JOIN hyf.status
-    ON task.status_id = status.id
-group by name
-
 
 
 
