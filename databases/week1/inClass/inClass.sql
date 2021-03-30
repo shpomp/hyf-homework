@@ -113,6 +113,15 @@ FROM task JOIN user
     ON task.user_id = user.id
 WHERE user.name LIKE "Maryrose%";
 
+-- or
+
+SELECT task.title
+FROM task 
+WHERE task.user_id IN
+(SELECT user.id
+FROM user
+WHERE name LIKE "Maryrose%");
+
 -- 10. Find how many tasks each user is responsible for;
 
 SELECT count(task.id) as task_count, user.name
