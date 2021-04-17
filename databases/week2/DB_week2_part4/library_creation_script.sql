@@ -38,7 +38,7 @@ CREATE TABLE IF NOT EXISTS `library`.`reader` (
 ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- author
-CREATE TABLE IF NOT EXISTS `mydb`.`author` (
+CREATE TABLE IF NOT EXISTS `library`.`author` (
   `author_id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NOT NULL,
   `last_name` VARCHAR(45) NOT NULL,
@@ -48,7 +48,7 @@ ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 
 -- book_has_author
-CREATE TABLE IF NOT EXISTS `mydb`.`book_has_author` (
+CREATE TABLE IF NOT EXISTS `library`.`book_has_author` (
   `book_book_id` INT NOT NULL,
   `author_author_id` INT NOT NULL,
   PRIMARY KEY (`book_book_id`, `author_author_id`),
@@ -66,7 +66,7 @@ ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 
 -- book_has_reader`
-CREATE TABLE IF NOT EXISTS `mydb`.`book_has_reader` (
+CREATE TABLE IF NOT EXISTS `library`.`book_has_reader` (
   `book_book_id` INT NOT NULL,
   `reader_reader_id` INT NOT NULL,
   PRIMARY KEY (`book_book_id`, `reader_reader_id`),
