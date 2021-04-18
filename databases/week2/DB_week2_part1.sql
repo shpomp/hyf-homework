@@ -2,15 +2,9 @@ SELECT * FROM task2;
 
 -- Changed date columns to default current date
 ALTER TABLE task2
-MODIFY created timestamp;
-
-ALTER TABLE task2 
 MODIFY created TIMESTAMP DEFAULT CURRENT_TIMESTAMP;
 
 ALTER TABLE task2
-MODIFY updated timestamp;
-
-ALTER TABLE task2 
 MODIFY updated TIMESTAMP DEFAULT CURRENT_TIMESTAMP;
 
 -- Add a task with these attributes: title, description, created, updated, due_date, status_id
