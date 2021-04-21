@@ -73,34 +73,26 @@ WHERE id = 12;
 SELECT * FROM meal 
 WHERE price < 200;
 
--- *** incomplete
 -- Get meals that still has available reservations
--- Reservations (to check if my subquery would work)
-SELECT meal_id, SUM(num_of_guests) AS total_booked
-	FROM reservation
-	GROUP BY meal_id;
-
--- Availabe reservations    
-SELECT meal_id, title, description, location, price, max_reservations, total_booked, (max_reservations - total_booked) as `available_spots`
-FROM meal
-JOIN (
-	SELECT meal_id, SUM(num_of_guests) AS `total_booked`
-	FROM reservation
-	GROUP BY meal_id
-	) 
-AS `grouped_bookings` ON meal_id = meal.id
-WHERE max_reservations > total_booked
-ORDER BY meal_id;
-
--- I am realising this does not include meals that are not booked at all
 -- Doing a left join shows me unbooked meals (null for "reserved"): 
 SELECT meal.id as meal, reservation.num_of_guests as reserved
 FROM meal
 LEFT JOIN reservation
 	ON meal.id = reservation.meal_id
 ORDER BY meal;
--- I am not sure how to include those in available_spots :((
 
+-- available reservations
+SELECT meal.id as meal_id, title, description, location, price, max_reservations, 
+	IFNULL(SUM(num_of_guests), 0) AS total_reservations, 
+	IFNULL((max_reservations - SUM(num_of_guests)), max_reservations) as available_spots
+FROM meal
+LEFT JOIN reservation
+	ON meal.id = meal_id
+GROUP BY meal.id
+HAVING  max_reservations > total_reservations or total_reservations is null
+ORDER BY available_spots;
+	
+	
 -- Get meals that partially match a title. Rød grød med will match the meal with the title Rød grød med fløde
 SELECT * 
 FROM meal
