@@ -75,7 +75,7 @@ WHERE price < 200;
 
 -- Get meals that still has available reservations
 -- Doing a left join shows me unbooked meals (null for "reserved"): 
-SELECT meal.id as meal, reservation.num_of_guests as reserved
+SELECT meal.id as mealID, reservation.num_of_guests as reserved
 FROM meal
 LEFT JOIN reservation
 	ON meal.id = reservation.meal_id
