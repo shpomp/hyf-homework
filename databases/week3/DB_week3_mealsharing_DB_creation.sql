@@ -41,12 +41,11 @@ CREATE TABLE IF NOT EXISTS `review` (
   `meal_id` INT UNSIGNED NOT NULL,
   PRIMARY KEY (`id`),
   INDEX `fk_review_meal_index` (`meal_id` ASC),
-  CONSTRAINT `fk_reviewmeal`
+  CONSTRAINT `fk_review_meal`
     FOREIGN KEY (`meal_id`)
     REFERENCES `meal` (`id`)
     ON DELETE CASCADE
     ON UPDATE CASCADE,
     CONSTRAINT `five_stars` CHECK ((`stars` <= 5)))
 ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE = UTF8MB4_UNICODE_CI;
-
 
