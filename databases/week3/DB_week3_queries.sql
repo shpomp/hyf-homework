@@ -123,5 +123,15 @@ FROM meal
 	JOIN review ON meal.id = review.meal_id
 GROUP BY meal.id
 ORDER BY rating_average desc;
+	
+-- to include the meals with no reviews
+SELECT meal.id as meal_id, meal.title as meal_title, COALESCE(review.title, "-") as review_title, 
+	COALESCE(review.description, "No review") as comment, 
+        IFNULL(ROUND(AVG(review.stars), 2), 0) AS rating_average,
+        COUNT(review.title) as total_reviews
+FROM meal
+	LEFT JOIN review ON meal.id = review.meal_id
+GROUP BY meal.title
+ORDER BY meal.id;
 
 
