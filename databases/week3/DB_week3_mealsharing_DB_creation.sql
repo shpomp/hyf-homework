@@ -11,8 +11,7 @@ CREATE TABLE IF NOT EXISTS `meal` (
   `max_reservations` INT NOT NULL,
   `price` DECIMAL(10,2) NOT NULL,
   `created_date` DATE NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE INDEX `id_UNIQUE` (`id` ASC) )
+  PRIMARY KEY (`id`) )
 ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE = UTF8MB4_UNICODE_CI;
 
 -- reservation
@@ -25,7 +24,6 @@ CREATE TABLE IF NOT EXISTS `reservation` (
   `contact_email` VARCHAR(50) NOT NULL,
   `meal_id` INT UNSIGNED NOT NULL,
   PRIMARY KEY (`id`),
-  INDEX `fk_reservation_meal_index` (`meal_id` ASC),
   CONSTRAINT `fk_reservation_meal`
     FOREIGN KEY (`meal_id`)
     REFERENCES `meal` (`id`)
