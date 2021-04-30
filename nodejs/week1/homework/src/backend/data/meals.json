@@ -1,0 +1,27 @@
+[
+    {
+        "id" : 1,
+        "title" : "Dal makhani",
+        "max_guests" : 7,
+        "description" : "A nice night out eating delicious indian food",
+        "created_at" : "2021-03-06 15:00",
+        "price" : 55
+    },
+    {
+        "id" : 2,
+        "title" : "Tofu Scramble",
+        "max_guests" : 5,
+        "description" : "A healthy vegan brunch!",
+        "created_at" : "2021-04-24 11:00",
+        "price" : 70
+    },
+    {
+        "id" : 3,
+        "title" : "Apple pie giveaway",
+        "max_guests" : 10,
+        "description" : "Apple overload!",
+        "created_at" : "2020-08-24 11:00",
+        "price" : 40
+    }
+    
+]
