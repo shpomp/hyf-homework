@@ -62,7 +62,6 @@ app.get("/projects", (request, response) => {
         <a href="url"></a>
         <previewUrl>
         <codeUrl>
-
         <img>
     </body>
     </html>
