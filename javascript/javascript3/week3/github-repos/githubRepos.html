@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      img {
+        width: 100px;
+        border-radius: 50%;
+      }
+      section {
+        display: grid;
+        grid-template-columns: 200px auto;
+        padding: 50px;
+        border-bottom: 2px dotted gray;
+      }
+      a {
+        color: #1e90ff;
+      }
+      li {
+        padding: 10px;
+        list-style-image: url('https://www2.atmos.umd.edu/~chepurin/STUFF/bullets/sqblue.gif');
+      }
+    </style>
+    <title>Repos</title>
+  </head>
+  <body>
+    <script>
+      console.log('script!');
+
+      // https://api.github.com/search/repositories?q=user:USERNAME
+
+      //Fetch all the classmates repositories at the same time using Promise.all.
+
+      const body = document.querySelector('body');
+
+      const fetchUserRepoData = (GHuserName) => {
+        const userRepoData = new Promise((resolve, reject) => {
+          resolve(
+            fetch(
+              `https://api.github.com/search/repositories?q=user:${GHuserName}`
+            ).then((response) => response.json())
+          );
+        });
+        //console.log(userRepoData);
+        return userRepoData;
+      };
+      const usernames = ['mahakarzoun', 'Gohar33', 'Hani-far'];
+      const repoPromises = usernames.map((userName) =>
+        fetchUserRepoData(userName)
+      );
+
+      const dataFromPromises = () => {
+        Promise.all(repoPromises).then((data) => {
+          //console.log(data);
+          buildRepoPage(data);
+        });
+      };
+
+      const buildRepoPage = (data) => {
+        data.forEach((element) => {
+          console.log(element);
+          const section = document.createElement('section');
+          body.appendChild(section);
+
+          const div = document.createElement('div');
+          section.appendChild(div);
+
+          const userAvatar = document.createElement('img');
+          userAvatar.src = element.items[0].owner.avatar_url;
+          div.appendChild(userAvatar);
+
+          const h1UserName = document.createElement('h1');
+          h1UserName.innerText = element.items[0].owner.login;
+          div.appendChild(h1UserName);
+
+          const ul = document.createElement('ul');
+          section.appendChild(ul);
+
+          element.items.forEach((item) => {
+            //console.log(item);
+            const li = document.createElement('li');
+            li.innerHTML = `<a href="${item.html_url}">${item.name}</a>`;
+            ul.appendChild(li);
+          });
+        });
+      };
+
+      dataFromPromises();
+    </script>
+  </body>
+</html>

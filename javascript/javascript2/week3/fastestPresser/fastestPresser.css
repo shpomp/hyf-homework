@@ -1,0 +1,94 @@
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+/* the above hides the default number input arrows*/
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* the above fixes so button and input is same width */
+
+body {
+  font-family: Verdana;
+  text-align: center;
+  margin: 0;
+  background: #6575ac;
+  color: #36333d;
+}
+
+input:focus {
+  outline: 0;
+}
+
+#game-duration-div {
+  background: #cc8ebd;
+  padding: 20px;
+}
+
+#game-duration-input {
+  width: 120px;
+  height: 50px;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  background: #b1c8f1;
+}
+
+#game-start {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  width: 120px;
+  background: #b1ddf1;
+  border: none;
+  border-radius: 5px;
+  color: #36333d;
+}
+#game-start:focus {
+  outline: 0;
+}
+
+#verdict {
+  position: relative;
+}
+
+#keys-S-and-L {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+#keyS {
+  background: #e0de9a;
+  padding-top: 20vh;
+  padding-bottom: 20vh;
+}
+
+#keyL {
+  background: #a896c5;
+  padding-top: 20vh;
+  padding-bottom: 20vh;
+}
+
+#result {
+  position: absolute;
+  margin: auto;
+  width: 95%;
+  transform: translate(0px, 70px);
+}
+
+canvas {
+  position: absolute;
+  z-index: 100;
+  margin-left: 0px;
+}

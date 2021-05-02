@@ -1,0 +1,16 @@
+[
+{
+    "orderName": "avocado toast",
+    "orderID": 1234,
+    "price": 77,
+    "listOfDrinks": ["margarita", "water"],
+    "orderExtras": "onion"
+  },
+{
+    "orderName": "watermellon juice",
+    "orderID": 4567,
+    "price": 7137,
+    "listOfDrinks": ["lemon juice", "coffee"],
+    "orderExtras": "salt"
+  }
+]
