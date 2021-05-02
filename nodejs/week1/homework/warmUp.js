@@ -24,7 +24,6 @@ constructor(radius) {
 
 // Instantiate a couple of circles and log out their diameter, circumference and area.
 
-
 const myCircle = new Circle(15);
 console.log(myCircle.getDiameter()); 
 console.log(myCircle.getCircumference()); 
