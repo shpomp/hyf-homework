@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "name": "Freddie M",
+    "email": "bohemian@mercury.dk",
+    "meal_id": 1
+  },
+  {
+    "id": 2,
+    "name": "Ernest H",
+    "email": "oldmanandthe@sea.com",
+    "meal_id": 2
+  },
+  {
+    "id": 3,
+    "name": "Winnie P",
+    "email": "pooh@pooh.dk",
+    "meal_id": 3
+  },
+  {
+    "id": 4,
+    "name": "Piglet",
+    "email": "pink@piglet.com",
+    "meal_id": 3
+  }
+
+]
