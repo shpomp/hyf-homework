@@ -56,14 +56,14 @@ app.get("/subtract", (req, res) => {
 // http://localhost:3000/subtract?num=10&number=2&number=5
 
 // -- MULTIPLY
-app.get("/multiply", (req, res) => {
+app.post("/multiply", (req, res) => {
   console.log("multiply");
   res.send(processQuery(multiply, req.query));
 });
 // http://localhost:3000/multiply?num=10&number=2&number=5
 
 // -- DIVIDE
-app.get("/divide", (req, res) => {
+app.post("/divide", (req, res) => {
   console.log("divide");
   res.send(processQuery(divide, req.query));
 });
