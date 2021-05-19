@@ -10,8 +10,7 @@ app.get("/", (req, res) => res.send("nodejs week3 homework"));
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
 
 const extractQueryNumbers = (object) => {
-  const queryNumbers = Object.values(object);
-  const unnestQueryNumbers = queryNumbers.flat();
+  const unnestQueryNumbers = Object.values(object).flat();
   const numbers =
     unnestQueryNumbers.some(isNaN) || unnestQueryNumbers.length < 2
       ? []
