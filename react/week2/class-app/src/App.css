@@ -1,0 +1,22 @@
+.App {
+  text-align: center;
+}
+
+body {
+  background-color: rgba(174, 98, 165, 0.845);
+}
+button {
+  background-color: rgb(226, 232, 166);
+}
+.count {
+  font-size: x-large;
+  color: rgb(0, 69, 245);
+}
+
+input {
+  background-color: rgb(205, 180, 127);
+}
+ul {
+  text-align: left;
+  list-style: none;
+}
