@@ -2,8 +2,8 @@ import React from "react";
 import { useState } from "react";
 
 const AddTask = ({ onAdd }) => {
-  const [desc, setDesc] = useState();
-  const [day, setDay] = useState();
+  const [desc, setDesc] = useState("");
+  const [day, setDay] = useState("");
   const [reminder, setReminder] = useState(false);
 
   const onSubmit = (e) => {
