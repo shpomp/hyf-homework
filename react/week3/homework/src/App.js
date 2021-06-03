@@ -43,13 +43,13 @@ function App() {
         {!loading && <p className="status">you have {tasks.length} tasks!</p>}
         <Header
           title="To do:"
-          onAdd={() => setShowAddTask(!showAddTask)}
+          addItem={() => setShowAddTask(!showAddTask)}
           propShowAdd={showAddTask}
         />
         {loading && <ClipLoader color="gray" loading={loading} size={30} />}
-        {showAddTask && <AddTask onAdd={addTask} />}
+        {showAddTask && <AddTask addItem={addTask} />}
         {tasks.length ? (
-          <Tasks tasksprop={tasks} onDelete={deleteTask} />
+          <Tasks tasksprop={tasks} deleteTask={deleteTask} />
         ) : loading ? (
           ""
         ) : (

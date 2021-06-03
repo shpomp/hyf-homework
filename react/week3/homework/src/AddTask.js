@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 
-const AddTask = ({ onAdd }) => {
+const AddTask = ({ addItem }) => {
   const [description, setDesc] = useState("");
   const [deadline, setDeadline] = useState("");
 
@@ -15,7 +15,7 @@ const AddTask = ({ onAdd }) => {
       alert("add deadline!");
       return;
     }
-    onAdd({ description, deadline });
+    addItem({ description, deadline });
     setDesc("");
     setDeadline("");
   };

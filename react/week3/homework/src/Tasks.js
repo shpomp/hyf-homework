@@ -1,10 +1,10 @@
 import Task from "./Task";
 
-const Tasks = ({ tasksprop, onDelete }) => {
+const Tasks = ({ tasksprop, deleteTask }) => {
   return (
     <>
       {tasksprop.map((task) => (
-        <Task key={task.id} task={task} onDelete={onDelete} />
+        <Task key={task.id} task={task} deleteTask={deleteTask} />
       ))}
     </>
   );

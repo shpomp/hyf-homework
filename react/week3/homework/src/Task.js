@@ -2,12 +2,12 @@ import { FaRegTrashAlt, FaRegEdit, FaRegSave } from "react-icons/fa";
 import { useState } from "react";
 import Border from "./Border";
 
-const Task = ({ task, onDelete }) => {
+const Task = ({ task, deleteTask }) => {
   const [checkbox, setCheck] = useState(false);
   const [editing, setEditing] = useState(false);
   const [taskDescription, setTaskDescription] = useState(task.description);
 
-  const taskChecked = () => {
+  const checkTask = () => {
     setCheck(!checkbox);
   };
 
@@ -25,7 +25,7 @@ const Task = ({ task, onDelete }) => {
             <input
               className="taskCheckBox"
               type="checkbox"
-              onClick={taskChecked}
+              onClick={checkTask}
             />
             {editing ? (
               <input
@@ -44,7 +44,10 @@ const Task = ({ task, onDelete }) => {
             ) : (
               <FaRegEdit className="icon" onClick={() => setEditing(true)} />
             )}
-            <FaRegTrashAlt className="icon" onClick={() => onDelete(task.id)} />
+            <FaRegTrashAlt
+              className="icon"
+              onClick={() => deleteTask(task.id)}
+            />
           </div>
         </h3>
         <p>{task.deadline}</p>
