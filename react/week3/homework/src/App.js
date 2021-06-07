@@ -21,12 +21,10 @@ function App() {
       .then((tasksList) => {
         setTasks(tasksList);
         setLoading(false);
-        console.log(tasksList);
       });
   }, []);
 
   const addTask = (task) => {
-    console.log(task);
     const id = Math.floor(Math.random() * 1000) + 1;
     const newTask = { id, ...task };
     setTasks([...tasks, newTask]);
@@ -34,7 +32,6 @@ function App() {
 
   const deleteTask = (id) => {
     setTasks(tasks.filter((task) => task.id !== id));
-    console.log("delete ", id);
   };
 
   return (
