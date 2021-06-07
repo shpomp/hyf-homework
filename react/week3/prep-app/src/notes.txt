@@ -1,0 +1,30 @@
+Controlled and uncontrolled input fields
+
+Control the value, save it in state and put it back into input field. 
+
+
+
+const ControlledInput = (props) => {
+  return <input type="text" value="mads"></input>;
+};
+
+! Warning: You provided a `value` prop to a form field without an `onChange` handler. 
+This will render a read-only field. If the field should be mutable use `defaultValue`. 
+Otherwise, set either `onChange` or `readOnly`.
+
+
+
+  const [age, setAge] = useState();
+Because it is undefinded whn it first loads.
+A component is changing an uncontrolled input to be controlled. 
+This is likely caused by the value changing from undefined to a defined value, 
+which should not happen. Decide between using a controlled or uncontrolled input element for the lifetime of the component.
+
+
+const nextCats = cats.concat(file);
+React Hook useEffect has a missing dependency: 'cats'. 
+Either include it or remove the dependency array
+if I would put [cats] to listen, it would update and listen again - like an infinite loop. 
+
+
+? function is recreated, it is not the same as before ?
