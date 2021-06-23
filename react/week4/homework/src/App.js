@@ -19,12 +19,16 @@ function App() {
     setLoading(true);
     // debouncing
     const id = setTimeout(async () => {
-      const result = await fetch(
-        `https://api.github.com/search/users?q=${searchInput}`
-      );
-      const fetchedData = await result.json();
-      result.ok ? setUsers(fetchedData.items) : setUsers([]);
-      setLoading(false);
+      try {
+        const result = await fetch(
+          `https://api.github.com/search/users?q=${searchInput}`
+        );
+        const fetchedData = await result.json();
+        result.ok ? setUsers(fetchedData.items) : setUsers([]);
+        setLoading(false);
+      } catch (error) {
+        console.log(error);
+      }
     }, 2000);
 
     return () => cleanUp(id);
