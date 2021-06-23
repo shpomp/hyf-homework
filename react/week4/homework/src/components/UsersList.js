@@ -21,7 +21,7 @@ const UsersList = () => {
             };
             return (
               <UserContext.Provider key={user.id} value={userInfo}>
-                <User></User>
+                <User/>
               </UserContext.Provider>
             );
           })}
