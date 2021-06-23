@@ -33,12 +33,12 @@ function App() {
   return (
     <div className="App">
       <SearchContext.Provider value={{ searchInput, setSearchInput }}>
-        <SearchBar></SearchBar>
+        <SearchBar/>
       </SearchContext.Provider>
       {loading && <p>loading....</p>}
       {!loading && (
         <ResultContext.Provider value={{ users }}>
-          <UsersList></UsersList>
+          <UsersList/>
         </ResultContext.Provider>
       )}
     </div>
