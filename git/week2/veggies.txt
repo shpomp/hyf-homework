@@ -3,3 +3,5 @@ carrot
 paprika
 zucchini
 cauliflower
+potato
+cucumber
